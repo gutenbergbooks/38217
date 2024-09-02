@@ -1,0 +1,2818 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Don Pietro Caruso</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="don-pietro-caruso">
+    <h1 class="document-title level-1 pfirst title">Don Pietro Caruso</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME TERZO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <strong class="bold">DON PIETRO CARUSO</strong> — LA FINE DELL'AMORE —
+        </div>
+        <div class="line">
+          FIORI D'ARANCIO — TRAGEDIE DELL'ANIMA.
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">3ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI-GENOVA</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Copyright by Roberto Bracco and Miss Dircé St. Cyr in the United States of America.</span>
+        </div>
+      </div>
+    </div>
+    <hr class="docutils" />
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote class="small">
+        <div>
+          <p class="pfirst"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext">È assolutamente proibito di rappresentare queste produzioni senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext">Copyright by Roberto Bracco and Miss Dircé St. Cyr in the United States of America.</p>
+          <p class="pnext">Off. Tip. Sandron — 148 — I — 290514.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="invisible pageno target" title="5" id="page-5"></span><span class="x-large">DON PIETRO CARUSO</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="italics large">Dramma in un atto</span>
+      </div>
+    </div>
+    <p class="pfirst">Questo dramma fu rappresentato la prima volta al Teatro <em class="italics">Sannazzaro</em> di Napoli, da <span class="small-caps">Ermete Novelli</span>, nel <em class="italics">novembre</em> del 1895.</p>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="6" id="page-6"></span> <span class="invisible pageno target" title="7" id="page-7"></span></p>
+    <p class="center large pnext">PERSONAGGI:</p>
+    <blockquote class="small">
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <span class="small-caps">Don Pietro Caruso</span>
+          </div>
+          <div class="line">
+            <span class="small-caps">Margherita</span>, <em class="italics">sua figlia</em>
+          </div>
+          <div class="line">
+            <span class="small-caps">Il Conte Fabrizio Fabrizi</span>
+          </div>
+          <div class="line">
+            Voci interne.
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            La scena è a Napoli. — Epoca attuale.
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pnext"><span class="invisible pageno target" title="8" id="page-8"></span> <span class="invisible pageno target" title="9" id="page-9"></span></p>
+    <div class="level-2 section" id="atto-unico">
+      <h2 class="center level-2 pfirst section-title title">ATTO UNICO.</h2>
+      <p class="pfirst"><em class="italics">Una stanzetta poveramente ammobigliata. In fondo, nel centro, una porta grande, e, a qualche distanza, una finestra. A destra, una specie di basso focolare rusticano con la gran cappa affumicata, il quale serve anche da caminetto. A sinistra, una porticina. Quasi davanti al focolare, una scrivania con su carte in disordine e l'occorrente per scrivere. Una credenza, una tavola rotonda, poche seggiole sciancate, un bacile sopra un treppiede di ferro, una brocca di acqua, un asciugamani. Fra la porta d'ingresso e la finestra, un umile lettuccio con su un materasso avvoltolato. Sulla credenza, la statuina colorata d'un santo con innanzi una lampada a olio.</em></p>
+      <p class="pnext"><em class="italics">(È giorno, ma durante l'azione l'aria andrà lievemente oscurandosi.)</em></p>
+      <div class="level-3 section" id="scena-i">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA I.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="margherita-e-fabrizio">MARGHERITA E FABRIZIO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(è seduto, con le braccia incrociate, con la faccia buia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="10" id="page-10"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(è alla finestra, e parla a voce alta con una vicina.)</em> Grazie, signora Punzo! <em class="italics">(Poi, rivolgendosi pianissimo a Fabrizio)</em> Scusa. È la signora Punzo qui accanto che mi ha avvertita di tirar su le lenzuola, ch'erano a prendere aria. <em class="italics">(Da una funicella esteriore, ritira due lenzuola e le piega, seguitando a parlare con la vicina.)</em> Se non mi aveste chiamata voi, io non me ne sarei nemmeno accorta del cattivo tempo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <em class="italics">(tentenna il capo.)</em>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(Lampeggia un poco e si ode qualche tuono.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alla vicina)</em> Ci siamo, eh!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Pausa.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce della vicina</span>
+          </div>
+        </div>
+        <p class="pfirst">Il babbo è in casa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Nossignora, sono sola... come sempre.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce della vicina</span>
+          </div>
+        </div>
+        <p class="pfirst">Stanotte, ho sognato un bue a tre corna e un morto con la gobba. Volevo consultare Don Pietro, che di queste cose se ne intende.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="11" id="page-11"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh! Quando tornerà.... <em class="italics">(Chiudendo la finestra)</em> Permettete. <em class="italics">(A Fabrizio, riponendo le lenzuola piegate sul materasso)</em> Sono per il letto del babbo. Mi dispiaceva che si bagnassero. <em class="italics">(Un silenzio. — Ella guarda Fabrizio, gli si accosta alle spalle e gli circonda il collo con le braccia, baciandogli i capelli.)</em> Dunque, è uno scherzo....<a class="footnote-reference pginternal" href="#id2" id="id1"><sup>1</sup></a></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(liberandosi dalle braccia di lei)</em> Non è uno scherzo, Margherita. Con te, non ho mai scherzato. Prima di risolvermi, ho molto riflettuto. Ed ho sofferto. Ora, sono irremovibile.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma io che male ti ho fatto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Nessuno.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti sono di peso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">No.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="12" id="page-12"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti guasto la vita? Ti distraggo? T'importuno?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">No, no! E questo ti prova appunto che io agisco esclusivamente a vantaggio tuo. Continuando, che ci rimetterei, io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Non lo so; ma il certo è che per tenerti legato a me, io non avrei dovuto....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(interrompendola)</em> T'inganni!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">No, non avrei dovuto fare... quello che ho fatto. Credi ch'io sia tanto stupida da non capirlo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Tu non capisci niente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Il capriccio t'è passato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Eccoci al solito <em class="italics">capriccio</em>!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="13" id="page-13"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Capriccio! Capriccio! Se fosse stato amore....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Va' là che non s'è ancora saputo se l'amore sia un capriccio che dura troppo, o se il capriccio sia un amore che dura troppo poco.... Non capisci niente, ti dico. Io sento per te, oggi, ciò che sentivo un mese fa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Si vede!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non si vedrà, pazienza! Ma è così. E perchè dovrebb'essere altrimenti? Tu sei diventata anche più bellina, più graziosa, più docile. E, anzi, è la tua stessa docilità quel che maggiormente mi fa paura. Sì, il venire qui, di nascosto, come ho fatto finora, a guisa di un mariuolo o di uno sciocco, per una persona della mia posizione sociale non è bello; e il rischio di trovarmi tra i piedi un uomo della risma di tuo padre non è mica divertente: ma, via, non di questo mi preoccupo... perchè non sono un egoista. Io mi preoccupo di te, Margherita, di te. Tu ti sei lasciata andare senza prevedere le conseguenze. Cerchiamo di prevederle almeno ora. C'è tanti guai da evitare. Evitiamoli. Se stringessimo di più i nostri vincoli, non ne saresti tu, poverina, l'unica vera vittima? <em class="italics">(Pausa.)</em> Tutto quello che è accaduto tra noi non lo metteremo in piazza nè tu nè io. E, facendo il sacrifizio <span class="invisible pageno target" title="14" id="page-14"></span>di separarci — ed è per me un gran sacrifizio, Margherita — ce la saremo cavata il meglio possibile.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Si direbbe che non mi conosci, Fabrizio! Tu credi, senza dubbio, di parlare con un'altra donna, con un'altra Margherita. Dici che io sarei l'unica vittima? Ma di chi? Ma di che cosa? Io non sarò vittima di nessuno e di nulla se tu non mi abbandoni; e una tua parola, una tua parola affettuosa, un tuo bacio, una mezz'ora della tua presenza potranno farmi sopportare allegramente tutti i guai che tu temi, tutte le conseguenze che prevedi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">È inutile: non mi convinci.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Io ti risparmierò qualunque imbarazzo, qualunque noia, qualunque fastidio....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed io invece ho il dovere di risparmiarti la pubblicità del fallo... e,... chi sa,... molte sofferenze morali... e... materiali... di cui tu non hai neppure una vaga idea.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma giacchè io sono pronta a tutto, perchè te ne preoccupi tu?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="15" id="page-15"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè non voglio avere altri scrupoli di coscienza!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">E se non vuoi avere altri scrupoli di coscienza, non devi lasciarmi morire di crepacuore!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce del portinaio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(viene di giù, dal cortile, fioca e cadenzatamente stentorea)</em> Signorina Margherita... signorina Margherita!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Auff! Che c'è ancora?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">È il portinaio che mi chiama. <em class="italics">(Rassegnata, riapre la finestra e si ode il rumore della pioggia. Ella si mette un fazzoletto sulla testa e si affaccia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce del portinaio</span>
+          </div>
+        </div>
+        <p class="pfirst">Il signor Chianese, può salire?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Non lo sapete che sono chiusa in casa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Bada che mi ha visto entrare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="16" id="page-16"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Fabrizio)</em> Che novità! Lo so; ma le mance perchè le piglia?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce del portinaio</span>
+          </div>
+        </div>
+        <p class="pfirst">Credevo che Don Pietro fosse rincasato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">No, non è rincasato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce del portinaio</span>
+          </div>
+        </div>
+        <p class="pfirst">Il signor Chianese vuole quella lettera che Don Pietro gli aveva promessa. A me non ha dato niente. L'avrà dimenticata sulla scrivania.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Vedrò. <em class="italics">(Cerca sulla scrivania inutilmente. Torna alla finestra.)</em> Sulla scrivania non c'è nessuna lettera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce del signor Chianese</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(un po' balbuziente)</em> Allora, dite a Don Pietro, da parte mia, che è un furfante e un mancatore di parola.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Di queste imbasciate non gliene faccio, al babbo. <em class="italics">(Chiude in fretta la finestra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un silenzio.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="17" id="page-17"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Io me ne vado, Margherita. Tuo padre poco può tardare e una sorpresa proprio all'ultimo sarebbe un bel grattacapo per tutti e due. Questa è la chiave <em class="italics">(cavando una chiave da una saccoccia e mettendola sulla tavola)</em> che è stata, disgraziatamente, la nostra complice; e io te la consegno, vedi, per non avere più la tentazione di venire a trovarti in segreto. Buttala via, o nascondila. Io ti auguro... che nessun altro debba servirsene.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Fabrizio!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh, mia cara, soltanto chi è bestialmente fatuo può credere di essere il solo a meritare una donna! <em class="italics">(Pausa.)</em> Io tornerò più tardi per aggiustare certe faccende con Don Pietro. Il suo lavoro elettorale mi è stato disastroso, ma io non me ne lamenterò, e c'intenderemo egualmente.... <em class="italics">(Indi, prendendo il cappello)</em> Sicchè... addio Margherita....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Fabrizio, riprenditi quella chiave.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Margherita, non tentarmi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Riprendila... riprendila... Non togliermi ogni speranza.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="18" id="page-18"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">No... no... Bisogna troncare!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(afferrandogli le braccia e trattenendolo)</em> Senti, Fabrizio..... ti voglio dire un'altra parola... Senti.....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">È tardi.... Lasciami.... Ne riparleremo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma quando, ma come ne potremo riparlare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ne riparleremo... ne riparleremo.... <em class="italics">(Si svincola ed esce richiudendo la porta.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piange silenziosamente. Poi, balbetta singhiozzando</em>:) Sì, sì, «ne riparleremo».... Parole!... Parole!... <em class="italics">(Piange ancora, prende la chiave e la intasca. Indi, versa dell'acqua nel bacile, si lava gli occhi e se li asciuga. Apre la credenza, ne trae una tovaglia e dei piatti e comincia ad apparecchiare la tavola.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-ii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="19" id="page-19"></span>SCENA II.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="margherita-pietro">MARGHERITA, PIETRO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(è su per le scale, cantando rocamente l'aria del «Trovatore» e intercalandovi molte pause:)</em></p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                Sconto col sangue mio....
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Il babbo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(la cui voce va avvicinandosi)</em></p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                L'amor che pósi in te!
+              </div>
+              <div class="line">
+                Non ti scordar di me!
+              </div>
+              <div class="line">
+                Non ti scordar di me!
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce della vicina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(chiamando:)</em> Ohè, Don Pietro! Don Pietro!... Siete voi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Pare. In che posso servirvi, signora Punzo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce della vicina</span>
+          </div>
+        </div>
+        <p class="pfirst">Favorirmi sempre. Volevo pregarvi: stanotte, in sogno, un morto con la gobba e un bue a tre corna. Che mi dite? Che numeri devo giocare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="20" id="page-20"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">È chiaro: il morto con la gobba 47 e 57, il bue 77, e metteteci il 3... per le corna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">La voce della vicina</span>
+          </div>
+        </div>
+        <p class="pfirst">Grazie!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Niente, per ora. Ma raccomandatevi ai santi protettori del lotto pubblico...: devono essere parecchi: e ci rivedremo a vincita fatta! <em class="italics">(Ricomincia a cantare, ripigliando il motivo press'a poco dove l'ha interrotto</em>:)</p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                Non ti scordar di me!
+              </div>
+              <div class="line">
+                E.. le.. o.. noo... ra!
+              </div>
+              <div class="line">
+                E... le... o... nora...
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <p class="pfirst"><em class="italics">(Si sente un poco il rumore della chiave nella serratura. La porta si apre subito. Egli entra.)</em></p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                Eleonora, addio!
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <p class="pfirst"><em class="italics">(Richiude la porta col lucchetto, e si avanza a passi gravi, solennemente comico. Il lungo soprabito col frusto bavero alzato e l'unto cappello a tuba grondano acqua. Ugualmente inzuppati sono i calzoni dagli orli rossi e le scarpe scalcagnate.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">In quale stato!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">In quale stato?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="21" id="page-21"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sei fradicio, babbo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Lo credo, io! Non senti che pioggia?!... Brrrr....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">E il tuo ombrello? E il tuo pastrano?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Prima di tutto, ragioniamo. <em class="italics">(Il verbo «ragionare» gli corre spesso alla bocca, pronunziato lievissimamente come se gli scivolasse dalle labbra.)</em> Appena ho messo la chiave nel buco della serratura, la porta si è aperta. <em class="italics">(Quasi serio, mostrando la chiave che ha in mano)</em> Come va questa faccenda?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con simulazione)</em> Come vuoi che vada? Quando sei uscito, avrai dimenticato di chiudere bene. Sei così distratto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Anche questo può darsi. Brrr.... L'umido mi penetra nelle ossa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Mio Dio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="22" id="page-22"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ci hai delle legna per fare un po' di fuoco?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Non so.... <em class="italics">(Esce a sinistra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(agitando il cappello affinchè l'acqua possa colare — riflette:)</em> Anche questo può darsi. La distrazione è il solo connotato che distingua l'uomo dalla bestia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di dentro)</em> Per fortuna, ce n'è delle legna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(continuando tra sè:)</em> Difatti, la capra, la volpe, il cavallo, l'asino sono mai distratti? Nossignore! <em class="italics">(Dopo avere asciugato il cappello con un fazzoletto, mette l'uno e l'altro sul cornicione della cappa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entra con le legna e si adopera ad accendere il fuoco.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(togliendosi il soprabito)</em> Brava la mia Margherita!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sono ancora i resti della panchetta fracassata.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="23" id="page-23"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E allora, siano benedette le spalle sulle quali la fracassai! <em class="italics">(Distende il soprabito sulla spalliera di una seggiola accanto al fuoco.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ginocchioni, intenta alla bisogna)</em> Ma del pastrano e dell'ombrello, babbo, che ne hai fatto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sei un gran tipo, tu! Quando sono uscito, pioveva, forse? No. E dunque che bisogno ne avevo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Per altro, hai portato via ombrello e pastrano.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Naturale! <em class="italics">(Prende dall'attaccapanni una lunga giacca vecchia, tutta sudiciume e tutta rappezzature.)</em> E li ho utilizzati. <em class="italics">(Infilando la giacca)</em> Questa invece non c'è più da utilizzarla. Se andassi ad offrirla al Monte di Pietà mi riderebbero in faccia, e ne avrebbero il diritto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi)</em> Come! Hai pegnorato?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con fierezza)</em> Ombrello e pastrano. Beninteso! O bella! Per chi mi pigli? Pegnoratissimi!... La giornata si annunziava così scarsa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="24" id="page-24"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mite)</em> Eppure, avevi promesso di comperare da pranzo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Precisamente perchè io sono un uomo di risorse! Che diamine!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con dolce rimprovero)</em> Babbo! Babbo! <em class="italics">(Riprende ad apparecchiare la tavola.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cavando dalle saccocce del panciotto una pipa e dei mozziconi)</em> Ma... non ti dar pena, Margherita, perchè... grazie a Dio <em class="italics">(tritola i mozziconi)</em>.... Sì, dico, grazie a Dio, il pranzo non c'è. Questo è innegabile! Però, qualche volta, il pranzo viene giù dal cielo come l'acqua. Non sempre, veh!... Ho detto: «qualche volta». Chi sa!... Aspettiamo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(siede presso la tavola, appoggiandovi un gomito e posando sulla mano il capo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(carica la pipa, l'accende con un piccolo tizzo preso dal focolare, e, fumando, siede tra il fuoco e la scrivania.)</em> Oh! Benone! Così. <em class="italics">(Canticchia</em>:) «Sconto col sangue mio.... L'amor che pósi in te....» <em class="italics">(Un breve silenzio.)</em> Riconosco che ho sbagliato.... Non lo nego.... Ma il mio piano aveva i <span class="invisible pageno target" title="25" id="page-25"></span>suoi pregi. Perchè, vedi, dopo l'operazione bancaria del pegnoramento, io ho... ragionato: «piuttosto che aspettare l'ora del pranzo con queste poche lire in mano, mettiamole a profitto e facciamole moltiplicare». Il capitale ozioso, mia cara, è una immoralità. Questa è la mia convinzione, e, tanto, non la cambio! Senonchè, mi sono ricordato che ero in pieno venerdì, e, prima di andare avanti, ho voluto prendere le debite precauzioni contro la jettatura della mala giornata. Ho stralciato una quota esigua dal capitale e mi sono provvisto di... <em class="italics">(mettendo fuori un gran cornetto</em> rosso) non so se mi spiego! Corallo vero non è, badiamo, chè, già, la qualità poco importa. Un corno deve essere un corno! Su questo mondo, la forma è tutto! E con l'amico in saccoccia, sono andato a... tu lo capisci, eh? Sono andato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">A giocare, babbo, a giocare....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Giocare! Giocare!... Che significa giocare? Diciamo: a negoziare. Orbene, ho negoziato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">E hai perduto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma sai perchè?... Perchè non avevo più quattrini. Il corno, poverino, non ce n'ha mica colpa! Niente affatto! Se avessi continuato, se avessi potuto continuare, perbacco, <em class="italics">(animandosi, si alza)</em> stai pur <span class="invisible pageno target" title="26" id="page-26"></span>tranquilla, Margherita, che le cose sarebbero andate altrimenti! <em class="italics">(Fremendo di voluttà e di rabbia)</em> Oggi mi sentivo la fortuna in pugno; me la sentivo qui, qui, <em class="italics">(mostra le mani)</em> e, credimi, Margherita, credimi, avrei avuto il coraggio di arrischiare non le vergognose cinque lire, maledetta la miseria!, ma migliaia di sterline belle e sonanti, e, come della luce del sole, per Satanasso!, sarei stato sicuro di saperle centuplicare. <em class="italics">(Pausa.)</em> Sarà per un'altra volta. Per oggi, contentiamoci di riscaldarci. Lui <em class="italics">(al soprabito)</em> ci dà il buon esempio. <em class="italics">(Mutandone la posizione sulla seggiola affinchè si rasciughi da tutte le parti)</em> Guarda, Margherita: sempre lo stesso, lui, da tanti anni! Perde il pelo, questo sì, ma non il vizio, per la semplice ragione che lui vizi non ne ha. <em class="italics">(Sospirando, risiede.)</em> Camperà più di me, è vero: ma non lo invidio per questo. Margherita, in fondo alla credenza troverai mezza bottiglia di Cognac. Abbi pazienza, portamela qui....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rassegnata, prende nella credenza la bottiglia e un bicchierino e glieli pone dinanzi, sulla scrivania.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ne vuoi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">No, babbo. <em class="italics">(Si allontana.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(riempie il bicchierino, beve di un fiato e tossisce strascicatamente come per grattarsi la gola.)</em> Di': sei in collera con papà tuo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="27" id="page-27"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Mai.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Vieni qua. <em class="italics">(Margherita gli si accosta. — Egli la carezza.)</em> Non credere che io non ci pensi a te. Calcolavo sul conte Fabrizi. Mi sono affacchinato per lui, in queste elezioni. È restato a terra.... Che ci posso fare? Ma il compenso verrà... verrà. È un galantuomo il conte, ed è per questo che non voglio importunarlo.... Intanto, ci ho in prospettiva una buona dozzina di affari coi fiocchi: il tentativo con la vedova Verrusio, la vendita Stefanelli — e lì c'è da infinocchiare mezzo mondo!; — la causa Marotta; — e il signor Francesco Marotta se vuole la mia testimonianza sa come deve regolarsi. — Che altro? Ah! l'affare Perrotti.... Quello poi è sicuro... La copia del suo progetto è nelle mie mani, e.... <em class="italics">(Pentendosi di aver detto troppo)</em> Milioni non ne verranno, no; ma, via, certamente, ci sarà, per esempio..., ci sarà da comperare <em class="italics">(tirando a sè Margherita)</em> quella magnifica stoffa a strisce... che il De Simone spampana nella sua vetrina.... Santi numi, che stoffa! Ecco una stoffa che mi piace. E non è tutto! Compreremo anche un cappello grande... con uno di quei nastri... con una di quelle piume... con uno di quei ciuffoni di fiori..., non so, ma ha da essere un cappello così straordinario da farti sembrare meglio di una principessa.... E andremo a spasso, andremo; e la gente, per la strada, dovrà guardarci a bocca aperta, e di buona o di mala voglia dovrà esclamare: Ohè, com'è elegante la figliuola di Don Pietro Caruso! <em class="italics">(Pausa. — Con malinconia)</em> Già, tu non ci vuoi mai venire a spasso con me. Si direbbe... che te ne vergogni.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="28" id="page-28"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Che idee!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, sì: te ne vergogni. Io sono uno sciamannato.... Vesto tanto male! Mi sono sempre vestito male! E perciò quand'ero studente e declamavo sui marciapiedi, mi chiamavano il <em class="italics">filosofo</em>. Ora mi chiamano il <em class="italics">galoppino</em>. Le attribuzioni sono diverse, ma il vestiario è lo stesso. E poi... e poi... le mie conoscenze non ti garbano. Quelli che mi salutano per la via non ti vanno a genio. D'altronde, se conoscessi delle brave persone, starei fresco. Le brave persone sono così inutili! Ma tu non dovresti dartene troppo pensiero. Sei una ragazza onesta tu? E che te ne importa degli altri? Pensa ai casi tuoi. Una ragazza che non va a spasso non trova marito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lievemente infastidita, gli volge le spalle.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E tu devi trovarlo! <em class="italics">(Pausa.)</em> Ah, Margherita! Io sono molto logoro, lo vedi, molto logoro! E tu avrai bisogno di un compagno, di un sostegno. Altrimenti, quando io me ne vado, <em class="italics">(con la mano accenna alla morte)</em> come farai, figlia mia adorata, come farai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(asciugandosi una lacrima)</em> Finiscila, babbo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="29" id="page-29"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">È da molto tempo che dovevo ragionare con te di queste cose. Come farai?... Tu non puoi lavorare.... Non sai lavorare....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Imparerò....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con uno scatto energico)</em> Io non lo voglio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Te l'ho chiesto in grazia tante volte.... Permettimi di imparare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con violenza)</em> Mai! mai! mai! <em class="italics">(Poi, animandosi sempre più)</em> Imparare! Come si fa ad imparare? Ah, lo so! Si sta tutta la giornata fuori della propria casa, in un laboratorio qualunque, dove si parla... di tutto, dove le ragazze si guastano tra loro, dove una sola di esse cattiva o corrotta basta a corrompere tutte le altre, e dove l'esempio di quelle che fanno il comodo loro e che se la godono è una tentazione perenne, a cui non è facile sottrarsi.... <em class="italics">(Con gli occhi spauriti)</em> Si esce di lì, stanche, eccitate; si trovano sul canto della via i fratelli, gli innamorati delle compagne... e tutti i birbanti pronti a profittare delle prime irrequietezze d'un piccolo essere sensibile ed inesperto.... E la tentazione diventa più acuta, più insidiosa, più incalzante, più prepotente... ed ecco che da una parte <span class="invisible pageno target" title="30" id="page-30"></span>s'impara a lavorare e dall'altra s'impara a transigere e ad avere nuove aspirazioni, a desiderare, a fantasticare... a perdersi!... Povere fanciulle!... Il cammino libero, quello del lavoro, quello dell'indipendenza, non vi sarà consentito, no, finchè noi uomini nasceremo con l'istinto d'inoculare nella donna tutto il veleno che può renderla più idonea al nostro egoismo. Ricòrdatelo, Margherita! Gli uomini sono vili, sono vili, sono vili!... Se io ti permetto d'andar fuori per provvedere alla tua esistenza, essi, che sono lì in agguato, non avranno pietà di te... non ne avranno di me. No, Margherita! <em class="italics">(Abbracciandola, quasi difendendola cupidamente)</em> No, Margherita mia.... No! No! Papà tuo ti vuole come sei.... Il tuo onore, il tuo onore è il suo riposo, è la sua luce, è la sua aria, è il suo alimento, è l'unico filo, l'unico che ancora lo leghi alla vita! <em class="italics">(Tossisce. — Pausa.)</em> E tu, per dare una consolazione a tuo padre, devi maritarti. Ragioniamo. L'andare attorno, alla ricerca d'un marito, non ci garba? Be'! Tanto meglio! Aspetteremo che il marito venga da noi. Le richieste non mancano. Non te ne sei accorta che Biagio mi sta alle calcagna?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah! L'antiquario....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rifacendo la voce un po' nasale di Biagio)</em> «Don Pietro, parlate con Margheritina.... Don Pietro, ditele che io ho una grande tenerezza per lei....»</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, sì....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="31" id="page-31"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Bello non è, e neppure giovanissimo.... Ma ha una buona clientela, è un negoziante intemerato, vende per roba antica tutto ciò che gli pare e piace.... Insomma, è un uomo per bene che ha parecchie dita di cervello e, all'occorrenza, ha anche tanto di cuore. Ieri, poveretto, voleva per forza prestarmi cinque lire....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un repentino moto d'orrore)</em> E tu le prendesti?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(calorosamente, in uno slancio irruente di protesta orgogliosa)</em> No che non le presi, perdinci! Da lui, no, mai!... Appunto perchè so che ti vuol bene! <em class="italics">(Un silenzio.)</em> Dunque, Margherita?...</p>
+        <p class="pnext"><em class="italics">(Si picchia alla porta comune con le nocche delle dita)</em>.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Chi è?</p>
+      </div>
+      <div class="level-3 section" id="scena-iii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA III.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="pietro-margherita-fabrizio">PIETRO, MARGHERITA, FABRIZIO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Son io, don Pietro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con giubilo)</em> Non è la voce del signor conte?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="32" id="page-32"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(turbandosi)</em> Mi pare di sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Apri, apri.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alza il lucchetto e si ritrae.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(facendo capolino)</em> È permesso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(andandogli incontro, cerimonioso)</em> Avanti, avanti, signor conte.... Siete in casa vostra, lo sapete.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(avanzandosi)</em> Vi saluto, Don Pietro. <em class="italics">(Con un cenno del capo)</em> Signorina....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">È la pioggia che vi mena da queste parti?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Avete ragione, sono manchevole....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non dico per questo. <em class="italics">(Gli toglie di mano il cappello.)</em> Margherita, una sedia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="33" id="page-33"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">No, no... Me ne vado subito.... Ho da recarmi a Roma, e forse più lontano,... e ho stabilito di partire stasera, col treno delle sei e quaranta....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ne ha una scossa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah? Di partenza?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, e giacchè debbo sbrigare ancora qualche faccenda a casa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">C'è tempo, c'è tempo.... Ma, del resto, eccomi a voi. Quali comandi, signor conte?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Nessuna preghiera, don Pietro. Prima di partire, desidero di saldare quel conticino.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(giubilante e affaccendato)</em> Caro signor conte, voi siete un portento... voi siete un prodigio.... Margherita, una sedia, t'ho detto.... Che cosa fai lì, come una statua?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non ce n'è bisogno, don Pietro....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="34" id="page-34"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tremante e con lo sguardo rivolto altrove per non lasciarsi scorgere, gli avvicina una seggiola.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Grazie, signorina.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(portando la seggiola presso la scrivania)</em> Qui, qui! <em class="italics">(Quasi costringendolo a sedere)</em> Accomodatevi, ve ne prego.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, ma non perdiamo tempo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh, che volete! La sorpresa... il piacere.... Voi non potete immaginare come arrivate opportuno.... <em class="italics">(Sedendo dall'altro lato della scrivania)</em> La manna nel deserto!... E tu, Margherita, non salti dalla gioia?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tenta di sorridere.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Fabrizio)</em> È commossa. Vedete, non ho vergogna di dirvelo: senza di voi, oggi, io e lei avremmo passata la giornata così... a bocca asciutta.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="35" id="page-35"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(siede presso la tavola, a lavorare all'uncinetto, sempre perplessa, sofferente, con le orecchie tese.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Cioè, a bocca asciutta, no, perchè questa è una bottiglia di Cognac.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Posso offrirvi? <em class="italics">(Ne versa nel bicchierino.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Grazie, no.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Alla vostra salute! <em class="italics">(Beve e tossisce.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non bevete, don Pietro; dobbiamo parlare di affari.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Per me, oramai, è come l'acqua. Sono all'ordine, io. <em class="italics">(Apre un registro sulla scrivania.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cava di tasca qualche carta. — Piano:)</em> Vorreste pregare la signorina di allontanarsi un poco?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="36" id="page-36"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(forte)</em> Oh, non vi preoccupate! Quella lì non ci disturba.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(subito)</em> No davvero.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Tuttavia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Niente, niente. Lasciatela stare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(malvolentieri)</em> Come volete.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Il conto completo delle spese fatte nella settimana precedente alle elezioni ve lo mandai martedì, e, se non sbaglio, è quello che avete in mano.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Perfettamente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E dovete convenire che, fra tutti i vostri collaboratori elettorali, don Pietro è stato il più economico.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="37" id="page-37"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Economico, così così.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh! oh! Mi date un dolore....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Veniamo al <em class="italics">quatenus</em>, se non vi dispiace.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Veniamoci.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Secondo la vostra noticina, la somma che vi versai il giorno sette fu tutta esaurita.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">I cento voti che vi promisi li avete avuti sì o no?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Va bene, li avrò avuti.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E la neutralità di quel camorrista di Attanasio Belfiore dovevo o non dovevo ottenerla a qualunque prezzo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma va benissimo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="38" id="page-38"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Le carrozze che servirono a portarvi tutti gli elettori sciancati e paralitici, dovevo o non dovevo pagarle?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(spazientito)</em> Ho capito, don Pietro, ho capito....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E non lo sapete che feci risuscitare otto morti affinchè venissero a votare per voi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">O Dio, don Pietro, finiamola!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Volevo ragionare, volevo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma che ragionare! Abbiamo assodato che quella somma fu esaurita?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sissignore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">E non ne parliamo più. C'è stata qualche altra spesa che per caso abbiate dimenticata?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="39" id="page-39"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Siete d'una delicatezza degna del nome che portate. Un momentino. <em class="italics">(Legge nel registro, mormorando:)</em> «Conte Fabrizio Fabrizii... Conte Fabrizio Fabrizii... Conte Fabrizio Fabrizii»... <em class="italics">(A lui)</em> Nessun'altra spesa, signor conte. <em class="italics">(Altero di questa sua risposta)</em> Cheh!... Questo significa aver le mani pulite!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si stringe nelle spalle)</em> Sicchè, ora non mi resta che compensarvi di tutto ciò che avete fatto per me. Se il risultato non è stato quello che voi più di tutti mi facevate sperare, io non ve ne serbo rancore. Anzi... desidero di remunerarvi largamente... molto largamente....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(il cui volto s'irradia)</em> Signor conte!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ascolta impallidendo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">... Anche perchè... mi avete resi tanti altri favori....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Servigi sempre.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">... e il vedervi, proprio ora, ridotto in queste condizioni....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="40" id="page-40"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Agli estremi! agli estremi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">... mi rattrista, mi fa male....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Troppo buono!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, voglio lasciarvi <em class="italics">(sottolineando le parole, affinchè Margherita comprenda)</em> una grata memoria di me; e, uscendo da questa casa, voglio sapervi lieto, voglio sapervi felice... insieme con la vostra figliuola.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(inebriandosi)</em> Non senti, Margherita?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cui manca la voce)</em> Sì, sento, babbo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a lui)</em> È commossa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma intanto... ho da chiedervi un ultimo piccolo favore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ordinate.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="41" id="page-41"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pianissimo)</em> Voi, di certo, non avrete distrutte alcune lettere mie riguardanti qualche affaruccio,... In esse non c'è nulla di grave... Nondimeno,... se me le renderete, io, francamente,... starò più tranquillo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(abbassando la voce più di lui)</em> Mi offendete.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Via, don Pietro, ci conosciamo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Io non so che cosa intendiate dire, ma,... per non contrariarvi... <em class="italics">(apre un cassetto della scrivania, e cerca)</em> obbedirò. <em class="italics">(Dandogli un pacchetto di carte)</em> Ecco le vostre lettere.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo averle contate)</em> Oh, bravo! Così mi piace! <em class="italics">(Si alza.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con premura e smarrimento)</em> Come!! Ve ne andate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(amaro e fiero)</em> Adesso siete voi che offendete me!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="42" id="page-42"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh! Potrei rispondere alla mia volta che... ci conosciamo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Siete un impertinente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mutando)</em> Ma appunto perchè ci conosciamo, io ho piena fiducia nella vostra parola.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(contenendosi)</em> Ciò non mi commuove che mediocremente. Sorvoliamo. <em class="italics">(Pausa. — Cavando fuori una busta)</em> Questa busta è per voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(più che mai inquieta, guarda con la coda dell'occhio.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(avidamente tende le mani.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Prima di prenderla, però, voi mi dovete promettere, mi dovete giurare che non sciuperete questo danaro per i vostri vizii e per le vostre solite stravaganze. <em class="italics">(Con gentilezza e con sincera bontà)</em> Vi parlo da amico, don Pietro. Ricordatevi che avete una figliuola grande e che tutto ciò che sperperate è tolto a lei, verso cui avete dei sacri doveri.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="43" id="page-43"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(umilmente)</em> Nella vostra voce c'è qualche cosa di buono e di affettuoso a cui non sono abituato. Ve ne ringrazio, signor conte... E io vi giuro sul mio ono... <em class="italics">(s'interrompe, mortificato; indi, si corregge)</em> vi giuro... sull'onore di Margherita....</p>
+        <p class="pnext"><em class="italics">(Come per un fluido magnetico, s'incontrano gli sguardi, furtivi, di Margherita e di Fabrizio</em>.)</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(continuando)</em>... che questo danaro, dal quale sottrarrò appena quel poco che è necessario alle esigenze momentanee, sarà conservato, scrupolosamente... per lei.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si leva, frenandosi e parlando senza fiato)</em> No, babbo.... Io... non potrò mai permettere che....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con giocondità)</em> Silenzio, tu! Quello che potrai permettere lo saprai più tardi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">A voi, don Pietro. <em class="italics">(Gli consegna la busta.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(col cuore palpitante apre la busta e subito il suo volto si anima e i suoi occhi brillano di stupore e di ebbrezza.)</em> Signor conte!... Che cos'è questo?!... <span class="invisible pageno target" title="44" id="page-44"></span>Ma io sogno!... Io non merito tanto! <em class="italics">(Mostrando con la mano in alto, in preda ad una gioia pazza, i biglietti di banca)</em> Margherita! Margherita!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si sorregge alla tavola.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(spaventato)</em> Margherita!... Figlia mia!... Tu sei pallida....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ritrovando la forza nella sovraeccitazione)</em> Babbo, tu non devi accettare quel danaro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non devo accettarlo? O scherzi, o impazzisci!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non le date retta, don Pietro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gridando)</em> Non devi, non devi accettarlo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dilatando le pupille)</em> Non devo accettarlo? <em class="italics">(Invaso dal dubbio atroce)</em> Ma perchè?... Ma perchè?... <em class="italics">(Un silenzio.)</em> Margherita? Parla, parla: perchè non devo accettare il suo danaro?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="45" id="page-45"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Non lo hai ancora compreso?! Ebbene, te lo dico io....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Parla!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(prorompendo)</em> Perchè esso è il prezzo della mia colpa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(disperatamente, gettando via il danaro)</em> No!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Tacete, Margherita!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè esso è il prezzo del mio peccato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">No! No!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con lacerante veemenza)</em> È il prezzo del mio povero amore, del mio amore sciocco e insensato, ed è ciò che egli paga, intendi?, è ciò che paga a me e a te per avere il diritto di licenziarmi come si licenzia la serva di cui non si ha più bisogno!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="46" id="page-46"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alla figlia, sentendosi strozzare dal dolore e dall'ira)</em> Esci.... Esci di casa mia.... Esci.... Vattene... Mi fai ribrezzo!....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Babbo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi fai ribrezzo!... Vorrei essere cieco per non vederti, vorrei essere sordo per non udire la tua voce. <em class="italics">(Terribile)</em> Esci!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Vi prego, don Pietro....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non parlo con voi, signor conte. <em class="italics">(A Margherita)</em> Esci! <em class="italics">(Restano tutti e tre qualche momento in silenzio, come paralizzati.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lenta e dimessa, singhiozzando, si avvia per uscire.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un impeto subitaneo)</em> No, aspetta! <em class="italics">(Supplichevole)</em> Aspetta! <em class="italics">(Pausa.)</em> Te ne andavi davvero, eh?... Dove andavi?... <em class="italics">(Sottovoce)</em> Le strade <span class="invisible pageno target" title="47" id="page-47"></span>sono piene di pericoli... e, tra poco... <em class="italics">(avendone un brivido)</em> sarà notte.... <em class="italics">(Poi, rivolgendosi risoluto a Fabrizio)</em> Signor conte, voi non mi lascerete così la mia figliuola.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cortese)</em> Don Pietro, innanzi a lei non possiamo parlare liberamente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">È giusto. <em class="italics">(A Margherita)</em> A te: hai inteso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(la prende per un braccio, e, con lieve violenza, la conduce verso la porta a sinistra, parlandole all'orecchio concitatamente:)</em> Mi hai confessato tutto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre singhiozzando)</em> Tutto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non hai altro da dirmi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Niente altro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="48" id="page-48"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non hai conosciuto che lui?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Lui! Lui!... Il solo! <em class="italics">(Via.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-iv">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA IV.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="pietro-e-fabrizio">PIETRO E FABRIZIO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(chiude l'uscio, raccoglie i biglietti e li porge a Fabrizio in atto quasi di preghiera.)</em> Riprendete, signor conte....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pazientemente, scrollando il capo, intasca i biglietti.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ora, potrete rispondere. Voi non me la lascerete così la mia figliuola.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Don Pietro, io non vi capisco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tutto tremante nella voce)</em> È tanto semplice, è tanto naturale, è tanto chiaro....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="49" id="page-49"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Gli è che siete troppo eccitato. Parleremo con più calma un'altra volta.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma qui non si tratta d'un qualche affare che riguardi voi e me. Qui si tratta di lei, della mia creatura,... infame sì, ma sventurata.... E noi non abbiamo il diritto di prolungarle questi momenti d'angoscia.... Parleremo adesso, signor conte.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rassegnato, siede.)</em> E parliamo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi, da quel galantuomo che siete, non negate, non potete negare che la mia creatura, quando ha conosciuto voi, era una ragazza onorata.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non lo nego.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non potete negare che la sua confessione... quella che le è uscita di bocca un momento fa... è stata veritiera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non nego neanche questo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="50" id="page-50"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E dunque, ragioniamo: la responsabilità di chi è?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Di tutti e due, perchè Margherita non è più una bambina e io non sono nè un seduttore, nè un ingannatore.... Ci siamo amati, ci siamo piaciuti, siamo stati deboli, imprudenti.... Non dovrei parlare così, ma voi mi ci costringete. Ognuno di noi due ha la sua parte di responsabilità.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah, già! <em class="italics">(Animandosi dolorosamente)</em> Responsabile il maschio, responsabile la femmina! La natura umana è uguale per tutti, come la legge. Senonchè, questa eguaglianza finisce dove finisce il peccato e dove comincia la pena. La responsabilità è comune, sissignore, ma la femmina sconta la sua debolezza con la vergogna di tutta la vita, e il maschio la sconta con alcune migliaia di lire o, qualche volta, solamente con un'alzata di spalle. Ecco l'uguaglianza della natura umana! <em class="italics">(Pausa.)</em> Signor conte, io sono e sono stato sempre una persona orribile, perchè, nascendo, ereditai, insieme con un po' di triste ingegnaccio, tutti i germi che man mano si sviluppano per ammiserire un uomo. Pure, un giorno, dopo un momento di brutalità, quando mi trovai dinanzi una povera donnetta che non aveva commessa altra colpa che quella a cui io l'avevo trascinata, sentii il desiderio e la necessità di farne mia moglie. <em class="italics">(Con tenera soavità)</em> Mi visse due anni, e furono i più lieti della mia esistenza.... <span class="invisible pageno target" title="51" id="page-51"></span>Non sentite lo stesso desiderio, la stessa necessità, voi, che siete una persona sana e virtuosa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma come c'entra tutto questo? Io non comprendo come voi, che, in fondo, siete un uomo assai intelligente, mi possiate chiedere sul serio ch'io sposi vostra figlia. Il suo caso mi sta a cuore più che non crediate. Le ho voluto bene veramente e ancora gliene voglio, ancora mi piace.... Mi separavo da lei per evitarle... guai peggiori. Prontissimo a qualunque accomodamento, ma sposarla?!... sposarla?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sposarla, s'intende!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Via, non scherziamo. Io non sono un uomo superiore, e non aspiro ad esserlo. Se la società in cui viviamo è fatta male, volete che la rifaccia proprio io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sposare una ragazza che vi si è data anima e corpo significa rifare la società?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Significa sfidarla, il che è più pericoloso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="52" id="page-52"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">La sfidereste se non foste sicuro dell'onestà di lei.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma non devo esserne sicuro io; ne devono essere sicuri gli altri.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Il vostro nome è una garanzia.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Il mio nome esige precisamente ch'io dia conto agli altri della rispettabilità di mia moglie.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E allora a che serve un nome come il vostro se esso non è la marca di fabbrica che può garantire la rispettabilità della donna a cui lo date?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Don Pietro, voi mi obbligherete a dirvi delle cose molto crudeli....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma dite, dite....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi dimenticate o fingete di dimenticare la circostanza più importante.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="53" id="page-53"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">La circostanza più importante è che quella ragazza è rovinata.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">La circostanza più importante, la circostanza che esclude le speranze, le discussioni e i cavilli, don Pietro, è che essa è....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(intuendo)</em> Zitto, per carità!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(vibratamente)</em>... è che essa è <em class="italics">vostra figlia</em>!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(colpito e annichilito, non può pronunziare una sillaba.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi)</em> Tutto sommato, è bene che voi abbiate udito il suono di queste parole. Ma io vi domando: se anche amassi Margherita sino alla follia, in che modo potrei distruggere tutto ciò che le sta d'intorno, in che modo potrei annullare il vostro passato, il vostro presente, tutta la vostra vita, tutto il discredito — per non dir di peggio — della casa in cui ella è nata ed è vissuta? Sì, vi scalmanate in favore delle donne.... Ne sposaste una probabilmente perchè essa non aveva per padre <span class="invisible pageno target" title="54" id="page-54"></span>un uomo come voi e perchè voi non avevate niente da perdere e niente da sacrificarle. Ma per vostra figlia, che avete saputo fare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(oscillando da capo a piedi come preso dalla paura)</em> No, no, non continuate, non continuate....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Fra questi medesimi muri, che mi accoglievano di nascosto, io avevo visto le cose più strane e più equivoche. Venivo qui quando volevo. Trovavo una fanciulla sola, sempre sola, disfatta dalla noia e dalla malinconia, inutilmente desiderosa di una vita attiva e proficua, abbandonata a sè stessa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(quasi vedesse il triste quadro con le sue pupille dilatate e fisse)</em> È vero!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">... senza una risorsa, senza un sollievo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">È vero!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">... disposta a preferire qualunque lotta, qualunque rischio e financo la perdizione all'ozio lugubre del suo carcere. Nessuna traccia dell'autorità e dell'affetto paterno ci frenava, ci tratteneva, ci correggeva; nessun ostacolo si opponeva a me, nessuno <span class="invisible pageno target" title="55" id="page-55"></span>a lei.... E mentre la solitudine contribuiva ad aumentare gli scoraggiamenti e le insidie nell'animo della vostra figliuola, che facevate voi, don Pietro?... Dove eravate?... Dove eravate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sfinito, esausto, parlando a stento)</em> Basta, basta, per pietà.... Non ho più la forza di ascoltarvi.... Avete ragione.... L'avaro losco, che nasconde il suo tesoro in un pozzo senza fondo, non lo ritrova e non ha il diritto di ritrovarlo.... Avete perfettamente ragione.... Ma non mi tormentate più.... Mi aspettano ancora tante torture.... Concedetemi una tregua... e concludiamo il nostro colloquio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con affabilità contenuta)</em> La conclusione è che Margherita potrà sempre contare sul mio affetto. Credevo di giovarle rompendo ogni legame e facendole indirettamente... una mia doverosa offerta. Ma io come io non desidero che di continuare ad essere per lei... quello che sono stato sinora, assumendo l'impegno... di provvedere alla sua vita, senza restrizioni.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(come ebetito)</em> Questa è la vostra proposta?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Questa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Siamo intesi. <em class="italics">(Un silenzio.)</em> <em class="italics">(Un'idea tremenda gli occupa d'un subito il cervello.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="56" id="page-56"></span><span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">A rivederci, Don Pietro</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Riceverete a casa la risposta di mia figlia, fra pochi minuti.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Come vi accomoda. <em class="italics">(Fa per andare.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non volete neppure stringermi la mano?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(torna, porgendogli la destra)</em> Ma sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gliela stringe e gliela trattiene)</em> E non lo dimenticate questo saluto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè... se Margherita vi dirà di sì.... Don Pietro andrà a fare il galoppino... nell'altro mondo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Non dite scioccherie!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="57" id="page-57"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">A voi sembra assurdo che un uomo della mia qualità non abbia il coraggio di assistere alla... <em class="italics">discesa</em> della sua figliuola?... <em class="italics">(Lugubre)</em> E intanto è così, signor conte, è proprio così.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Vedrete, vedrete. Accomoderemo le cose in maniera che....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">... che tutti saranno soddisfatti?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Precisamente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">E io non ne dubito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un breve silenzio.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+        </div>
+        <p class="pfirst">Di nuovo, a rivederci, don Pietro....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, sì, a rivederci.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fabrizio</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <em class="italics">(esce.)</em>
+          </div>
+        </div>
+      </div>
+      <div class="level-3 section" id="scena-ultima">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="58" id="page-58"></span>SCENA ULTIMA</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="pietro-e-margherita">PIETRO E MARGHERITA.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si stringe le braccia, incrociate sul petto, come per una sensazione di morte. Vede la bottiglia di Cognac. L'afferra, e beve. Tossisce. Si alza a guisa di uno stordito. Si accosta alla porta della camera dov'è Margherita, e mette l'occhio al buco della serratura. Poi, guardingo, tremando, apre un cassetto della scrivania, ne cava una rivoltella. Nasconde l'arma nella giacca. Ciò fatto, con accento per quanto gli è possibile fermo, chiama:)</em> Margherita! Margherita!... Margherita!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(comparisce cogli occhi rossi, ansiosa, timida.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cercando di dissimulare il colmo dell'orgasmo e parlando con solennità, cui mal s'addicono la voce tremula e la pronunzia alquanto debole)</em> Margherita, ho ragionato a lungo col conte Fabrizii, e ci siamo detto... tutto ciò che potevano dirsi due uomini nelle nostre condizioni. Il risultato del colloquio è il seguente: Egli non può sposarti, e non ti sposerà. Su questo, niente da osservare.... La figlia di Don Pietro Caruso non si sposa. <em class="italics">(Pausa.)</em> Ma c'è, in compenso, una sua proposta... di altro genere. Il conte Fabrizii, per mezzo di tuo padre, ti propone di essere la sua... la sua amica, come sei stata sino ad oggi; e ti offre, senza restrizioni, <span class="invisible pageno target" title="59" id="page-59"></span>il suo appoggio. Vedi che son riescito a dire con disinvoltura e con garbo quello... che, probabilmente, nessun padre avrà mai detto a una figlia! <em class="italics">(Pausa.)</em> Ora, Margherita, sei tu che devi decidere. Su, dunque! Animo!... Animo!... Che decidi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(vorrebbe, ma non osa guardarlo, nè rispondere. È pallidissima.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un silenzio.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(fissandola acutamente e penosamente)</em> Rispondi, Margherita.... Rispondi. <em class="italics">(Pausa.)</em> <em class="italics">(Quasi con energia)</em> Che decidi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(abbassa il capo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trepidante, le si avvicina, e, tuttora fissandola, le solleva delicatamente il capo, costringendola a sentirsi in faccia lo sguardo di lui.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Babbo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Avanti!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a un tempo umile e risoluta)</em> Io l'amo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="60" id="page-60"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ne ha una tremenda stretta al cuore; ma si padroneggia.)</em> E sta bene. Non è necessario di aggiungere altro. Egli aspetta la tua risposta. Te la dètto io. Scrivi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sospesa, timorosa, non si muove.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con cupa violenza)</em> Ti ordino di scrivere!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(automaticamente, siede presso la scrivania, e si dispone a scrivere.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ridiventando mite)</em> Poche parole, ma compendiose. Scrivi, scrivi. <em class="italics">(Dettando:)</em> «Accetto la vostra proposta»... <em class="italics">(Pausa. — Con un intimo avanzo di speranza)</em> Hai scritto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sente la condanna che è in quel SÌ, e continua a dettare:)</em> «L'accetto... <em class="italics">imperciocchè</em> vi amo e fido <span class="invisible pageno target" title="61" id="page-61"></span>ciecamente in voi»... Se sei abituata a dargli del tu, correggi! <em class="italics">(Dètta:)</em> «Vi prego di venire appena avrete ricevuta questa lettera... <em class="italics">imperciocchè</em>... urge la vostra presenza».... <em class="italics">(Ancora un lampo di speranza)</em> Hai scritto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sente ribadire la condanna; le forze gli mancano, si piega un istante sul tavolino; ma di nuovo si padroneggia e si solleva.)</em> Benissimo. Firma, chiudi e mettici l'indirizzo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(esegue.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(girando intorno lo sguardo smarrito)</em> Il mio cappello?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Babbo, non uscire, adesso!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(prende la lettera di su la scrivania)</em> Il palazzo Fabrizii è qui vicino. Porto la tua risposta al signor conte....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="62" id="page-62"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma no, non c'è bisogno.... Non è indispensabile! <em class="italics">(Con uno slancio affettuoso)</em> Non voglio! Non voglio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ha un raggio di illusione negli occhi)</em> Non vuoi?... Che cosa non vuoi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Non voglio che ci vada tu stesso.... Sarebbe brutto, babbo, sarebbe sconveniente!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah! <em class="italics">(Pausa. — Ricascando nella sua profonda tristezza)</em> Questo è che non vuoi!... Eppure, è la prima volta che ti sono, in certo modo, un poco utile... Finora, non ti ho fatto che del male, Margherita. Assai te ne ho fatto!... Ti prometto di non fartene mai più!... Oh, non pensare che la testa mi giri! So quello che dico.... Poc'anzi..., questo è vero..., poc'anzi ho ancora bevuto.... Ma, credimi, ho le idee chiare, precise, fisse, ben inchiodate nel cervello, come non le ho mai avute.... <em class="italics">(Le si avvicina, profondamente commosso, con dolcezza, quasi con devozione)</em> Senti, Margherita. Tu... ti perdi... sì, ti perdi perchè sei mia figlia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Babbo!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="63" id="page-63"></span><span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed io... ti chiedo perdono d'essere tuo padre!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Babbo, non parlarmi così....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(stringendosela forte tra le braccia e scoppiando in un pianto dirotto)</em> Dimmi, dimmi che mi perdoni....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(anche lei piangendo)</em> Io non ho nulla da perdonarti!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">La tua incoscienza è la mia peggiore condanna! Dimmi che mi perdoni, Margherita, dimmi che mi perdoni... te ne supplico....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">E sia.... E sia. Ti perdòno.... Sì, ti perdòno... ti perdòno....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(coprendola di baci e di lagrime)</em> Grazie... Grazie.... <span class="invisible pageno target" title="64" id="page-64"></span><em class="italics">(Frena il pianto, e, fingendo di calmarsi, a poco a poco si distacca da lei)</em> Ecco... lo vedi... ora sono tranquillo. <em class="italics">(Sorride. Si drizza quasi impettito. Piglia il cappello e se lo calca in testa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">Con questa giacca esci, babbo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah?... <em class="italics">(Stranamente imbarazzato)</em> Con questa giacca? No. <em class="italics">(Se la toglie e cerca un pretesto per sottrarsi all'attenzione di Margherita.)</em> Guarda un po', Margherita, se piove ancora.</p>
+        <p class="pnext"><em class="italics">(Mentre ella va alla finestra e l'apre e la richiude, Don Pietro, con circospezione e sveltezza, cava la rivoltella dalla tasca della giacca e la ficca in una tasca del soprabito.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst">No, babbo, non piove più.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst">Be'!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lo aiuta a indossare il soprabito.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ne ha un brivido come se ella gli mettesse addosso la Morte.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="65" id="page-65"></span><span class="small-caps">Margherita</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(resta immobile, quasi attonita, seguendo lui con lo sguardo interrogativo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Pietro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo di aver indugiato qualche istante, abbottonandosi)</em> Addio, eh?... <em class="italics">(Ed esce, cantando con un estremo sforzo di volontà:)</em></p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                Sconto col sangue mio
+              </div>
+              <div class="line">
+                L'amor che pósi in te....
+              </div>
+              <div class="line">
+                Non ti scordar di... me...
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <p class="pfirst"><em class="italics">(La voce, lontana, si spezza come in un singulto.)</em></p>
+        <div class="vspace" style="height: 2em"></div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="large">SIPARIO.</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">(Fine del dramma.)</span>
+          </div>
+        </div>
+        <div class="footnotes level-4 section small" id="id3">
+          <h4 class="center level-4 pfirst section-title title">NOTA</h4>
+          <table class="docutils footnote-group" frame="void" rules="none">
+            <colgroup>
+              <col class="label" />
+              <col />
+            </colgroup>
+            <tbody valign="top">
+              <tr class="footnote" id="id2">
+                <td class="label"><a class="fn-backref pginternal" href="#id1">[1]</a></td>
+                <td>
+                  <p class="first last pfirst">Nota per gli interpreti: — Fin qui, la scena deve procedere lentamente, con mollezza tutta napoletana.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="vspace" style="height: 5em"></div>
+        <div class="backmatter"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
